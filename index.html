@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lo Style E L'extro · Barberia a Carmagnola</title>
+  <meta name="description" content="Lo Style E L'extro, la barberia per eccellenza a Carmagnola (TO). Taglio, barba e colore firmati Beppe. Via Gaetano Donizetti 8.">
+  <meta name="theme-color" content="#f7f5f1">
+  <meta property="og:title" content="Lo Style E L'extro · La barberia per eccellenza">
+  <meta property="og:description" content="Taglio, barba e colore firmati Beppe. Via Gaetano Donizetti 8, Carmagnola (TO).">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='%23c9a45c'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Lo Style E L'extro",
+    "slogan": "La barberia per eccellenza",
+    "telephone": "+39 338 858 2992",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Gaetano Donizetti 8",
+      "postalCode": "10022",
+      "addressLocality": "Carmagnola",
+      "addressRegion": "TO",
+      "addressCountry": "IT"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:30",
+      "closes": "18:30"
+    }],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "75" }
+  }
+  </script>
+</head>
+<body class="no-video">
+
+  <!-- 2. BARRA IN ALTO -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="logo" aria-label="Lo Style e L'extro, torna all'inizio">Lo Style <em>e</em> L'extro</a>
+      <nav class="nav__menu" id="menu" aria-label="Menu principale">
+        <a href="#beppe">Beppe</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#prenota">Prenota</a>
+        <a href="#contatti">Contatti</a>
+        <a href="#prenota" class="btn btn--dark nav__cta-mobile">Prenota</a>
+      </nav>
+      <a href="#prenota" class="btn btn--dark btn--sm nav__cta">Prenota</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. HERO CON ANIMAZIONE ALLO SCORRIMENTO -->
+    <section class="hero" id="hero" aria-label="La barberia per eccellenza">
+      <div class="hero__sticky">
+        <div class="hero__stage" aria-hidden="true">
+          <video id="heroVideo" muted playsinline preload="auto" disablepictureinpicture></video>
+          <div class="hero__glow"></div>
+        </div>
+
+        <div class="hero__copy">
+          <div class="hero__line is-active" data-from="0" data-to="0.2">
+            <p class="eyebrow">Carmagnola · dal cuore del Piemonte</p>
+            <h1 class="display">La barberia <em>per eccellenza</em></h1>
+            <p class="hero__sub">Taglio, barba e colore firmati Beppe. Scorri e guarda come nasce una sfumatura.</p>
+          </div>
+          <div class="hero__line" data-from="0.28" data-to="0.5">
+            <h2 class="display">Precisione <em>al millimetro.</em></h2>
+          </div>
+          <div class="hero__line" data-from="0.58" data-to="0.8">
+            <h2 class="display">Passata <em>dopo passata.</em></h2>
+          </div>
+          <div class="hero__line" data-from="0.87" data-to="1.01">
+            <h2 class="display">Il tuo taglio, <em>perfetto.</em></h2>
+            <div class="hero__actions">
+              <a href="#prenota" class="btn btn--dark">Prenota ora</a>
+              <a href="#servizi" class="btn btn--ghost">Servizi</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__hint" id="heroHint"><span>Scorri</span><i></i></div>
+        <div class="hero__progress" aria-hidden="true"><span id="heroProgress"></span></div>
+      </div>
+    </section>
+
+    <!-- 3. NUMERI -->
+    <section class="stats" aria-label="In numeri">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <p class="stat__value">4,8</p>
+          <p class="stat__label">su 5, da 75 recensioni Google</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat__value">4<sup>°</sup></p>
+          <p class="stat__label">al mondo in una competizione di taglio</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat__value">Mar–Sab</p>
+          <p class="stat__label">dalle 8:30 alle 18:30</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. IL MAESTRO -->
+    <section class="section maestro" id="beppe">
+      <div class="container maestro__grid">
+        <div class="maestro__text reveal">
+          <p class="eyebrow">Il maestro</p>
+          <h2 class="title">Precisione da <em>podio mondiale.</em></h2>
+          <p class="lead">Beppe guida Lo Style E L'extro con un'idea semplice: ogni taglio è su misura. Studia il viso, ascolta cosa vuoi e rifinisce ogni dettaglio a mano. È la stessa precisione che lo ha portato al quarto posto in una competizione mondiale di taglio.</p>
+        </div>
+        <figure class="quote reveal">
+          <span class="quote__mark" aria-hidden="true">“</span>
+          <blockquote>Il taglio giusto non si sceglie dal catalogo: si costruisce sulla persona.</blockquote>
+          <figcaption>
+            <span class="quote__author">— Beppe</span>
+            <span class="quote__source">Quarto posto mondiale, Corriere di Carmagnola 2021</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. SERVIZI -->
+    <section class="section servizi" id="servizi">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Il listino</p>
+          <h2 class="title">I nostri <em>servizi.</em></h2>
+        </div>
+        <ul class="menu-list">
+          <li class="menu-item reveal">
+            <span class="menu-item__cat">Uomo</span>
+            <div class="menu-item__body">
+              <h3>Taglio uomo</h3>
+              <p>Consulenza, shampoo, taglio e styling</p>
+            </div>
+            <span class="menu-item__price">in arrivo</span>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__cat">Uomo</span>
+            <div class="menu-item__body">
+              <h3>Barba</h3>
+              <p>Rifinitura al rasoio con panno caldo</p>
+            </div>
+            <span class="menu-item__price">in arrivo</span>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__cat">Uomo</span>
+            <div class="menu-item__body">
+              <h3>Taglio e barba</h3>
+              <p>L'esperienza completa</p>
+            </div>
+            <span class="menu-item__price">in arrivo</span>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__cat">Donna</span>
+            <div class="menu-item__body">
+              <h3>Taglio donna</h3>
+              <p>Taglio e piega</p>
+            </div>
+            <span class="menu-item__price">in arrivo</span>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__cat">Firma</span>
+            <div class="menu-item__body">
+              <h3>Colore</h3>
+              <p>Colore e trattamenti, la specialità della casa</p>
+            </div>
+            <span class="menu-item__price">in arrivo</span>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__cat">Bambino</span>
+            <div class="menu-item__body">
+              <h3>Taglio bambino</h3>
+              <p>Fino a 12 anni</p>
+            </div>
+            <span class="menu-item__price">in arrivo</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. PRENOTAZIONE -->
+    <section class="section prenota" id="prenota">
+      <div class="container prenota__grid">
+        <div class="prenota__intro reveal">
+          <p class="eyebrow">Prenota</p>
+          <h2 class="title">Il tuo posto, <em>in un minuto.</em></h2>
+          <ol class="steps">
+            <li><span class="steps__n">01</span><div><h3>Scegli</h3><p>Servizio, giorno e orario.</p></div></li>
+            <li><span class="steps__n">02</span><div><h3>Invia</h3><p>Tocca “Invia su WhatsApp”.</p></div></li>
+            <li><span class="steps__n">03</span><div><h3>Conferma</h3><p>Ricevi la conferma dal negozio.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="booking reveal">
+          <form id="bookingForm" novalidate>
+            <fieldset class="field">
+              <legend class="field__label">Servizio</legend>
+              <div class="pills" id="servicePills">
+                <label class="pill"><input type="radio" name="servizio" value="Taglio uomo" required><span>Taglio uomo</span></label>
+                <label class="pill"><input type="radio" name="servizio" value="Barba"><span>Barba</span></label>
+                <label class="pill"><input type="radio" name="servizio" value="Taglio e barba"><span>Taglio e barba</span></label>
+                <label class="pill"><input type="radio" name="servizio" value="Taglio donna"><span>Taglio donna</span></label>
+                <label class="pill"><input type="radio" name="servizio" value="Colore"><span>Colore</span></label>
+                <label class="pill"><input type="radio" name="servizio" value="Taglio bambino"><span>Taglio bambino</span></label>
+              </div>
+              <p class="field__error" data-error="servizio"></p>
+            </fieldset>
+
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="giorno">Giorno</label>
+                <input type="date" id="giorno" name="giorno" required>
+                <p class="field__error" data-error="giorno"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="orario">Orario</label>
+                <select id="orario" name="orario" required>
+                  <option value="">Scegli l'orario</option>
+                </select>
+                <p class="field__error" data-error="orario"></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Il tuo nome" required>
+                <p class="field__error" data-error="nome"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="Es. 333 123 4567" required>
+                <p class="field__error" data-error="telefono"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="note">Note <span class="muted">(facoltative)</span></label>
+              <textarea id="note" name="note" rows="3" placeholder="Preferenze, richieste particolari…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--dark btn--block">Prepara la prenotazione</button>
+          </form>
+
+          <div class="summary" id="summary" hidden>
+            <p class="eyebrow">Riepilogo</p>
+            <dl class="summary__list" id="summaryList"></dl>
+            <a class="btn btn--whatsapp btn--block" id="waLink" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.09c-.24.68-1.42 1.31-1.96 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.02.07.13.11.29.02.47-.09.18-.13.29-.27.45l-.4.47c-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.06.11.06.67-.18 1.35Z"/></svg>
+              Invia su WhatsApp
+            </a>
+            <button type="button" class="link-btn" id="editBooking">Modifica i dati</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ORARI E CONTATTI -->
+    <section class="section contatti" id="contatti">
+      <div class="container contatti__grid">
+        <div class="reveal">
+          <p class="eyebrow">Orari</p>
+          <h2 class="title">Quando <em>trovarci.</em></h2>
+          <ul class="hours" id="hours">
+            <li data-day="1"><span>Lunedì</span><span>Chiuso</span></li>
+            <li data-day="2"><span>Martedì</span><span>8:30 – 18:30</span></li>
+            <li data-day="3"><span>Mercoledì</span><span>8:30 – 18:30</span></li>
+            <li data-day="4"><span>Giovedì</span><span>8:30 – 18:30</span></li>
+            <li data-day="5"><span>Venerdì</span><span>8:30 – 18:30</span></li>
+            <li data-day="6"><span>Sabato</span><span>8:30 – 18:30</span></li>
+            <li data-day="0"><span>Domenica</span><span>Chiuso</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Contatti</p>
+          <h2 class="title">Passa a <em>trovarci.</em></h2>
+          <div class="contact-block">
+            <p class="contact-block__label">Indirizzo</p>
+            <p class="contact-block__value">Via Gaetano Donizetti 8<br>10022 Carmagnola (TO)</p>
+            <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via%20Gaetano%20Donizetti%208%2C%2010022%20Carmagnola%20TO" target="_blank" rel="noopener">Indicazioni</a>
+          </div>
+          <div class="contact-block">
+            <p class="contact-block__label">Telefono</p>
+            <p class="contact-block__value"><a href="tel:+393388582992">338 858 2992</a></p>
+            <button class="btn btn--ghost btn--sm" type="button" id="copyPhone">Copia numero</button>
+            <p class="contact-block__note">Telefonate solo in orario di lavoro, dal martedì al sabato.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. RECENSIONI -->
+    <section class="reviews">
+      <div class="container reviews__inner reveal">
+        <h2 class="title title--light">Ti sei trovato bene? <em>Lasciaci una recensione.</em></h2>
+        <a class="btn btn--light" href="https://search.google.com/local/writereview?placeid=ChIJAevRFCwEiEcRCEUQpuKO-ik" target="_blank" rel="noopener">Scrivi su Google</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Lo Style E L'extro <span>·</span> Via Donizetti 8, Carmagnola <span>·</span> <a href="tel:+393388582992">338 858 2992</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/hero.js" defer></script>
+</body>
+</html>
