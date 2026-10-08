@@ -255,7 +255,7 @@ textarea:focus-visible {
 
 .hero {
   position: relative;
-  height: 520vh;
+  height: 440vh;
   background: radial-gradient(120% 80% at 50% 35%, #ffffff 0%, var(--bg) 55%, #ebe6de 100%);
 }
 .hero__sticky {
@@ -269,30 +269,33 @@ textarea:focus-visible {
   position: absolute;
   inset: 0;
 }
-.hero__stage video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.2s var(--ease);
+.hero__frame {
+  position: absolute;
+  top: calc(50% + var(--nav-h) / 2);
+  right: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+  width: min(38vw, 540px);
+  height: min(76vh, 720px);
+  transform: translateY(-50%);
+  background: var(--bg-alt);
+  box-shadow: 0 50px 90px -50px rgba(20,18,16,.45);
 }
-.hero__stage video.is-ready { opacity: 1; }
-.hero__stage::after {
+.hero__frame::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(247,245,241,.88) 0%, rgba(247,245,241,.55) 32%, rgba(247,245,241,0) 58%);
+  inset: -14px 14px 14px -14px;
+  border: 1px solid var(--gold-light);
+  opacity: .7;
   pointer-events: none;
 }
-.no-video .hero__stage::after { display: none; }
-.hero__glow {
-  position: absolute;
-  left: 50%; bottom: -30%;
-  width: 120vmax; height: 60vmax;
-  transform: translateX(-50%);
-  background: radial-gradient(closest-side, rgba(176,141,79,.10), transparent 70%);
-  pointer-events: none;
+.hero__frame canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.4s var(--ease);
+  filter: contrast(1.04) saturate(.9) sepia(.06);
 }
+.hero__frame canvas.is-ready { opacity: 1; }
 
 .hero__copy {
   position: absolute;
@@ -306,14 +309,14 @@ textarea:focus-visible {
   position: absolute;
   left: var(--gutter);
   bottom: 16vh;
-  max-width: min(560px, 46vw);
+  max-width: min(500px, 40vw);
   opacity: 0;
   transform: translateY(26px);
   will-change: opacity, transform;
 }
 .hero__line.is-active { pointer-events: auto; }
-.hero__line .display { font-size: clamp(44px, 6.2vw, 92px); }
-.hero__line h1.display { font-size: clamp(48px, 6.8vw, 100px); }
+.hero__line .display { font-size: clamp(42px, 5.2vw, 80px); }
+.hero__line h1.display { font-size: clamp(46px, 5.6vw, 86px); }
 .hero__sub {
   margin-top: 24px;
   font-size: clamp(16px, 1.4vw, 19px);
@@ -372,21 +375,6 @@ textarea:focus-visible {
   transform-origin: left;
   transform: scaleX(0);
 }
-
-/* Finché il video non c'è: hero statico */
-.no-video .hero { height: 100vh; height: 100svh; }
-.no-video .hero__line { display: none; }
-.no-video .hero__line:first-child { display: block; opacity: 1 !important; transform: none !important; }
-.no-video .hero__line:first-child::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 1px;
-  margin-top: 36px;
-  background: var(--gold-grad);
-}
-.no-video .hero__progress,
-.no-video .hero__hint { display: none; }
 
 /* ---------- Stats ---------- */
 
@@ -889,7 +877,15 @@ textarea:focus-visible {
   .hero__actions { margin-top: 24px; }
   .hero__actions .btn { flex: 1; padding: 0 18px; }
   .hero__hint { display: none; }
-  .hero__stage::after { display: none; }
+  .hero__frame {
+    top: calc(var(--nav-h) + 14px);
+    left: var(--gutter);
+    right: var(--gutter);
+    width: auto;
+    height: 47svh;
+    transform: none;
+  }
+  .hero__frame::before { inset: -8px 8px 8px -8px; }
   .hero__copy::before {
     content: "";
     position: absolute;

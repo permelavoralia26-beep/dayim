@@ -39,7 +39,7 @@
   }
   </script>
 </head>
-<body class="no-video">
+<body>
 
   <!-- 2. BARRA IN ALTO -->
   <header class="nav" id="nav">
@@ -65,8 +65,9 @@
     <section class="hero" id="hero" aria-label="La barberia per eccellenza">
       <div class="hero__sticky">
         <div class="hero__stage" aria-hidden="true">
-          <video id="heroVideo" muted playsinline preload="auto" disablepictureinpicture></video>
-          <div class="hero__glow"></div>
+          <div class="hero__frame">
+            <canvas id="heroCanvas"></canvas>
+          </div>
         </div>
 
         <div class="hero__copy">

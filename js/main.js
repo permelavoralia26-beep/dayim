@@ -13,7 +13,7 @@
   var hint = document.getElementById('heroHint');
   var lines = Array.prototype.slice.call(document.querySelectorAll('.hero__line'));
 
-  // Stato condiviso con il video (js/hero.js)
+  // Stato condiviso con l'animazione della foto (js/hero.js)
   var state = window.heroState = { target: 0, p: 0 };
 
   function clamp(v, a, b) { return Math.min(b, Math.max(a, v)); }
@@ -24,7 +24,7 @@
     var total = hero.offsetHeight - window.innerHeight;
     state.target = total > 0 ? clamp(-rect.top / total, 0, 1) : 0;
     // Barra trasparente sopra l'animazione, poi bianca con sfocatura
-    var navSolid = rect.bottom <= nav.offsetHeight + 1 || document.body.classList.contains('no-video') && window.scrollY > 20;
+    var navSolid = rect.bottom <= nav.offsetHeight + 1;
     nav.classList.toggle('is-solid', navSolid);
   }
 
